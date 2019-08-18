@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.util.Range;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.Servo;
 
-@TeleOp(name="Basic: Iterative OpMode", group="Iterative Opmode")
+@TeleOp(name="Team Red Code", group="Iterative Opmode")
 public class Team_Red extends OpMode
 {
     // Declare OpMode members.
