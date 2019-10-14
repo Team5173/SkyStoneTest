@@ -78,22 +78,20 @@ public class Team_Red extends OpMode
         BR.setPower(rightPower);
 
         //Setting Servo to Speed
-        leftArm.setPower(leftarmPower);
-        rightArm.setPower(rightarmPower);
         wrist.setPower(wristPower);
 
-        if (gamepad1.right_stick_y > 0.1) {
-            leftarmPower = .20;
-            rightarmPower = -.20;
-        } else if (gamepad1.right_stick_y < -0.1) {
-            leftarmPower = -.20;
-            rightarmPower = .20;
+        if (gamepad2.right_stick_y > 0.1) {
+            leftArm.setPower(.20);
+            rightArm.setPower(-.20);
+        } else if (gamepad2.right_stick_y < -0.1) {
+            leftArm.setPower(-.20);
+            rightArm.setPower(.20);
         } else {
-            leftarmPower = 0;
-            rightarmPower = 0;
+            leftArm.setPower(0);
+            rightArm.setPower(0);
         }
 
-        if (gamepad1.right_trigger > 0.1) {
+        if (gamepad2.right_trigger > 0.1) {
             wristPower = .20;
         } else if (gamepad1.left_trigger < -0.1){
             wristPower = -.20;
@@ -101,7 +99,7 @@ public class Team_Red extends OpMode
             wristPower = 0.0;
         }
 
-        if (gamepad1.x){
+        if (gamepad2.x){
             claw.setPosition(0.25);
         } else if (gamepad1.b){
             claw.setPosition(0);
